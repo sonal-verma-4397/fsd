@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type=text/css>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 600px;
+            height: 600px;
+            border: 1px solid green;
+            display: flex;
+            /* flex-direction: row;
+            justify-content:center;
+            /* align-items: center; */
+            /* overflow: auto; */
+             flex-wrap: wrap; 
+            /* align-content: center; */ */
+
+        }
+
+
+        .container>div {
+            width: 100px;
+            height: 100px;
+        }
+
+        #mydiv1 {
+            order: 1;
+            flex: 1 1 100%;
+        }
+
+        #mydiv2 {
+            order: 2;
+            flex: 1 1 0%;
+        }
+
+        #mydiv3 {
+            order: 3;
+            flex: 1 1 100%;
+
+        }
+
+        .container>div:nth-child(odd) {
+            background-color: pink;
+        }
+
+        .container>div:nth-child(even) {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="mydiv1">div 1</div>
+        <div id="mydiv2">div 2</div>
+        <div id="mydiv3">div 3</div>
+
+
+    </div>
+</body>
+
+</html>

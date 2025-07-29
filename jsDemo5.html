@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let arr = [1,2,3,4,5,3];
+      // let r = arr.reduce((sum,ele)=>sum+ele,0);      //0 is the default value of sum
+      // console.log(r)
+
+      let carts = [
+        { proName: "smartwatch", price: 499 },
+        { proName: "earbud", price: 1000 },
+        { proName: "laptop", price: 59999 },
+        { proName: "headphone", price: 899 },
+      ];
+      let s = carts.reduce((sum, ele) => {
+       return sum + ele.price;
+      }, 0);
+      console.log(s);
+    //DOM is a cross platform and language independent ways of manipulating HTML and XML documents
+    </script>
+  </body>
+</html>

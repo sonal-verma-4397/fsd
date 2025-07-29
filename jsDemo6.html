@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .clsA {
+        background-color: navy;
+        color: white;
+      }
+      .clsB {
+        background-color: yellow;
+        padding: 20px;
+        text-align: center;
+      }
+      .clsC{
+        background-color: "pink";
+      }
+    </style>
+    <script>
+      function myFun() {
+        const ele = document.getElementById("myP");
+        // console.log(ele);
+        ele.textContent = "hello world";
+        const h = document.getElementById("h1");
+        h.textContent = ele.textContent;
+      }
+      function myFun2() {
+        const h = document.getElementById("h1");
+        // h.style.backgroundColor = "pink";
+        // h.style.color = "black";
+        // h.style.textAlign = "center";
+        // h.style.padding = "20px 30px";
+        // h.style.border = "1px solid black";
+
+        let lst = h.classList;
+        // lst.replace("clsA","clsC")
+
+        lst.toggle("clsA")
+        // // lst.add("clsA")
+        // // lst.add("clsB")
+        // console.log(lst.contains("clsA"));
+        // if (lst.contains("clsB")) lst.add("clsB");
+        // lst.remove("clsA");
+        console.log(lst);
+      }
+    </script>
+  </head>
+  <body>
+    <h1 id="h1" class="clsA">Heading</h1>
+    <button type="button" onclick="myFun2()">Button</button>
+  </body>
+</html>

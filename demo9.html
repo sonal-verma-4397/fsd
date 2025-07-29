@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: orange;
+            color: white;
+            border-radius: 20px;
+
+        }
+        nav img{
+            width: 100px;
+            height:100px ;
+            border-radius: 25px;
+            position: relative;
+            right: 380px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            font-size: 40px;
+            padding: 20px;
+            cursor: pointer;
+        }
+
+        @media screen and (min-width:768px) and  (max-width:991px) {
+           nav{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items:center ;
+           }
+           nav ul li{
+            font-size: 20px;
+            padding: 0 20px;
+           }
+        }
+        @media screen and (max-width:767px){
+            nav ul{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img src="https://marketplace.canva.com/EAGR4J_-jYM/2/0/1600w/canva-colorful-abstract-online-shop-free-logo-zxo07UzxTDw.jpg"
+            alt="">
+        <ul>
+            <li>Home</li>
+            <li>Product</li>
+            <li>Cart</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+
+</html>

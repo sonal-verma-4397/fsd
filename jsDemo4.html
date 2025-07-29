@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //*********filter***************
+      //      let cities_data = [
+      //         {name:"kanpur",population:10000},
+      //         {name:"kolkata",population:40000},
+      //         {name:"delhi",population:32000},
+      //         {name:"mumbai",population:80000},
+      //      ] ;
+
+      //      function callBack(ele){
+      //         if(ele.population >10000){
+      //             return true;
+
+      //         }
+      //      }
+      //    let r =   cities_data.filter(callBack)
+      //    console.log(r)
+      //    //**********map**************
+
+      //    let arr = [1,2,3,4,5];
+      //    let r1 = arr.map((ele)=>{
+      //     return ele**2
+      //    })
+      //    console.log(r1)
+
+      //    //******assignment*******
+
+      //    let temp_c = [-12,-20,0,11,25,45];
+      //   let t = temp_c.map((ele)=>{
+      //     return ele*(9/5)+32
+      //    })
+      //    console.log(t)
+      // let arr =[4,1,6,9,0];
+      // arr.sort()                                //not work for more than 1 digit value used compare function instead
+      // console.log(arr)
+      // let ar2 = [9,2,...arr];                 // [...] spread operator
+      // console.log(ar2)
+
+      // let arr = [4,3,19,22,8];
+      // arr.sort((a,b)=>{
+      //     return (a-b)                        //ascending order
+      // })
+      // console.log(arr);
+
+      let userData = [
+        { uid: 1004, unm: "sachin", age: 55 },
+        { uid: 1003, unm: "zaheer", age: 59 },
+        { uid: 1005, unm: "rahul", age: 45 },
+        { uid: 1008, unm: "priya", age: 65 },
+      ]; //sort id
+      //sort name, sort age
+      let r = [...userData].sort((a, b) => {
+        return a.uid - b.uid;
+      });
+      console.log(r);
+
+      r = [...userData].sort((a, b) => {
+        return a.age - b.age;
+      });
+      console.log(r);
+
+      r = [...userData].sort((a = "", b = "") => {
+        return a.unm.localeCompare(b.unm);
+      });
+      console.log(r);
+    </script>
+  </body>
+</html>

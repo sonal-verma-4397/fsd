@@ -1,0 +1,105 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   let arr = [100, 200, 300];
+
+      //   console.log(arr);
+      //   //arr contains whole array and stored
+      //   let [a, b, c] = arr; //destructuring  100-a 200-b,300-c
+      //   console.log(a, b, c);
+
+      //   let arr2 = [100, 200, [300, 400]];
+      //   let [x, y, [z1, z2]] = arr2; //nested destructuring
+      //   console.log(x, y, z1, z2);
+      //   //**********push****                //end mai aayega jo bhi push krenge
+      //   arr2.push(1);
+      //   console.log(arr2);
+
+      //   //**********unshift*******
+
+      //   arr2.unshift(3); //starting mai 3 aayega
+      //   console.log(arr2);
+
+      //   let r = arr.pop();
+      //   console.log(arr);
+      //   console.log(r);
+
+      //   //    ********shift*********  removes the first element
+
+      //   let s = arr.shift();
+      //   console.log(arr);
+      //   console.log(s);
+
+      //   //********slice*******
+
+      //   let arr3 = arr2.slice(0, 3);
+      //   console.log(arr3);
+      //   //0 se start kro 3 tk jao but 3 wala excluded hota hai mtlb 3 se phle ka slice hoga
+      //         // index no,deletecount, element to be insert   2- 0 kuch delete nhi hoga
+      //    arr.splice(0,0,9)                                   // 2-1 means delte count 1 mtlb delete kro
+      //   console.log(arr)
+
+      //   arr.splice(0,1)   //delete krna hota hai toh 2 hi arguement pass krte hai
+
+      //   arr.splice(0,0,9,8,7)    // to add
+      //   arr.splice(0,2,9,8,7)    //  to update
+      //   arr.splice(0,1)          //  to delete
+
+      //   let arr = [100, 200, 300, 400, 500];
+
+      //   function myCallBack(ele) {
+      //     console.log(ele);
+      //   }
+      //   arr.forEach(myCallBack); //**yaad-agar function ne kuch return nhi kiya toh hummesha undefined return hota hai
+
+      //   function forEach(arr, callback) {
+      //     for (let i = 0; i < arr.length; i++) {
+      //       callback(arr[i]); // here forEach call your
+      //     }
+      //   }
+
+      const transaction = [
+        { type: "deposit", amount: 1000 },
+        { type: "withdraw", amount: 2000 },
+        { type: "deposit", amount: 2000 },
+        { type: "withdraw", amount: 2000 },
+        { type: "deposit", amount: 500 },
+      ];
+
+      let balance = 0;
+      function callBack(ele) {
+        if (ele.type == "deposit") {
+          balance += ele.amount;
+          console.log(`"deposit"${ele.amount},"balance"${balance}`);
+        } else if (ele.type == "withdraw") {
+          balance -= ele.amount;
+          console.log(`"withdraw"${ele.amount},"balance"${balance}`);
+        }
+      }
+
+      transaction.forEach(callBack);
+
+      let arr2 = [100, 200, 300, 400, 500];
+
+      function filter(arr, callback) {
+        let result = [];
+
+        for (let i = 0; i < arr.length; i++) {
+          callBack(arr[i]);
+        }
+      }
+      let arr = [1, 2, 3];
+
+      let r = arr.filter((ele) => {
+        if (ele % 2 == 0) return true;
+      });
+      console.log(r);
+    </script>
+  </body>
+</html> -->
