@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="myDiv">
+      <h1>heading 1</h1>
+      <p id="myP" style = "display: none;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa, rerum.</p>
+    </div>
+    <button id="myBtn">Button</button>
+  </body>
+  <script>
+    document.getElementById("myBtn").addEventListener("click", () => {
+        const eleDiv = document.getElementById("myDiv")
+        console.log(eleDiv.textContent) //hide element bhi visible hota hai
+        console.log(eleDiv.innerText)       //hide element visible nhi hota
+        console.log(eleDiv.innerHTML)   //pura html tag and content sb return hoga
+    });
+  </script>
+</html>

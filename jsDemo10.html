@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="tabContainer"></div>
+    <button id="myBtn">button</button>
+  </body>
+  <script>
+       let userData = [
+         { uid: 1004, unm: "sachin", age: 55 },
+         { uid: 1002, unm: "rahul", age: 30 },
+         { uid: 1003, unm: "zaheer", age: 48 },
+         { uid: 1001, unm: "kaif", age: 18 },
+       ];
+       sortCols = {};
+       function createTable(data) {
+         //table creation and attributes
+         const myTab = document.createElement("table");
+         myTab.setAttribute("border", "2px");
+         myTab.setAttribute("width", "500px");
+         myTab.setAttribute("align", "center");
+         myTab.setAttribute("bgcolor", "#ddd");
+         //table head creation
+         const thead = document.createElement("thead");
+         const row = thead.insertRow();
+         //reading fields names
+         const keys = Object.keys(data[0]);
+         //headings using keys
+         keys.forEach((key) => {
+           let colhead = document.createElement("th");
+           colhead.textContent = key.toUpperCase();
+           colhead.style.backgroundColor = "black";
+           colhead.style.color = "white";
+           colhead.style.cursor = "pointer";
+           sortCols[key] = !sortCols[key];
+
+           colhead.addEventListener("click", () => {
+             const sortedData = [...userData].sort((a, b) => {
+               if (typeof a[key] === "number")
+                 return sortCols[key] ? a[key] - b[key] : b[key] - a[key];
+               else if (typeof a[key] === "string")
+                 return sortCols[key]
+                   ? a[key].localeCompare(b[key])
+                   : b[key].localeCompare(a[key]);
+             });
+            const tab = createTable(sortedData)
+            const main = document.getElementById("tabContainer")
+            main.innerHTML = ""
+            main.append(tab)
+           });
+           row.append(colhead);
+         });
+
+         //append head into table
+         myTab.append(thead);
+
+         //creation of table body
+         let tbody = document.createElement("tbody");
+
+         //add user data into table rows from each object
+         data.forEach((user) => {
+           let row = tbody.insertRow();
+           const val = Object.values(user);
+           val.forEach((val) => {
+             let col = row.insertCell();
+             col.textContent = val;
+           });
+           tbody.append(row);
+         });
+         myTab.append(tbody);
+         return myTab;
+       }
+
+       const btn = document.getElementById("myBtn");
+       btn.addEventListener("click", () => {
+             const tab =   createTable(userData);
+
+    const main = document.getElementById("tabContainer")
+            main.innerHTML = ""
+            main.append(tab)
+       });
+  </script>
+</html>

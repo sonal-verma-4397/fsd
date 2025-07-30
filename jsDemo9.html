@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id=" bt1">button-1</button>
+    <button id="bt2">button-2</button>
+    <div id="myDiv">Div Box</div>
+  </body>
+  <script>
+    const btn2 = document.getElementById("bt2");
+    btn2.addEventListener("click", () => {
+      console.log("hii");
+
+      const inpElem = document.createElement("input");
+      inpElem.setAttribute("type", "text");
+      inpElem.setAttribute("type", "date");
+
+      console.log(inpElem);
+      const d = document.getElementById("myDiv");
+      d.append(inpElem);
+    });
+  </script>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="checkbox" name="hobbies" value="swim" />Swimming
+    <input type="checkbox" name="hobbies" value="read" />Reading
+    <input type="checkbox" name="hobbies" value="dance" />Dancing
+    <input type="checkbox" name="hobbies" value="sleep" />Sleeping
+
+    <button id="btn2">Button2</button>
+  </body>
+  <script>
+    document.getElementById("btn2").addEventListener("click", () => {
+      const chklst = document.getElementsByName("hobbies");
+      chklst.forEach((chk) => { 
+        if (chk.checked) {
+            console.log(chk.value)
+        };
+      });
+    });
+  </script>
+</html>
